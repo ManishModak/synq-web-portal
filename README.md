@@ -78,38 +78,63 @@ Proxy Server (Port 8086)
 
 ## 🚀 **Quick Start**
 
-### **Prerequisites**
+### **🎯 Option 1: Run Production Build (No Flutter Required)**
+
+**Fastest way to see the app in action!** The production build is already included and ready to run.
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/ManishModak/synq-web-portal.git
+   cd synq-web-portal
+   ```
+
+2. **Start the production server**
+   ```bash
+   cd build/web
+   python -m http.server 8000
+   ```
+   
+3. **Open in your browser:** http://localhost:8000
+
+**Alternative servers:**
+```bash
+# Using Node.js (if you have it)
+cd build/web
+npx serve .
+
+# Using PHP (if you have it)
+cd build/web
+php -S localhost:8000
+
+# Or simply double-click: build/web/index.html
+```
+
+### **🛠️ Option 2: Development Mode (Requires Flutter)**
+
+For development and making changes to the code:
+
+**Prerequisites:**
 - Flutter SDK (3.16.0 or higher)
 - Dart SDK (3.0.0 or higher)
 - Node.js (for synchronizer CLI and proxy server)
 - Docker (for synchronizer container)
 
-### **Installation**
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/synq-web-portal.git
-   cd synq-web-portal
-   ```
-
-2. **Install Flutter dependencies**
+1. **Install Flutter dependencies**
    ```bash
    flutter pub get
    ```
 
-3. **Install Node.js dependencies**
+2. **Install Node.js dependencies**
    ```bash
    npm install
    ```
 
-### **Development Mode**
-
-1. **Run Flutter development server**
+3. **Run Flutter development server**
    ```bash
    flutter run -d chrome
    ```
 
-2. **Optional: Start backend services for live data**
+4. **Optional: Start backend services for live data**
    ```bash
    # Terminal 1: Start synchronizer container
    cd synchronizer-cli
@@ -123,14 +148,12 @@ Proxy Server (Port 8086)
    node proxy-server.js
    ```
 
-### **Production Build**
+### **🔨 Rebuild Production (If You Made Changes)**
 
-1. **Build for deployment**
-   ```bash
-   flutter build web --release
-   ```
-
-2. **Your deployment files are in:** `build/web/`
+```bash
+flutter build web --release
+# New files will be in: build/web/
+```
 
 ---
 
