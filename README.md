@@ -157,50 +157,6 @@ flutter build web --release
 
 ---
 
-## 🌐 **Deployment Options**
-
-### **1. Local Testing**
-```bash
-cd build/web
-python -m http.server 8000
-# Visit: http://localhost:8000
-```
-
-### **2. GitHub Pages** (Free)
-1. Push your code to GitHub
-2. Go to repository Settings → Pages
-3. Deploy from the `build/web` folder
-4. Your app will be at: `https://yourusername.github.io/synq-web-portal`
-
-### **3. Netlify** (Free tier available)
-```bash
-# Option 1: Drag & drop the build/web folder to netlify.com
-# Option 2: Connect your GitHub repo with these settings:
-# Build command: flutter build web --release
-# Publish directory: build/web
-```
-
-### **4. Vercel** (Free tier available)
-```bash
-npm i -g vercel
-cd build/web
-vercel
-```
-
-### **5. Firebase Hosting** (Free tier available)
-```bash
-npm install -g firebase-tools
-firebase login
-firebase init hosting
-# Set public directory to: build/web
-firebase deploy
-```
-
-### **6. Custom Server**
-Simply upload the entire `build/web` folder contents to your web server's public directory.
-
----
-
 ## 🔄 **Service Dependencies & Fallback Behavior**
 
 ### **🟢 With Backend Services (Live Data)**
