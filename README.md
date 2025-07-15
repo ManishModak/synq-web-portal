@@ -109,6 +109,23 @@ php -S localhost:8000
 # Or simply double-click: build/web/index.html
 ```
 
+### **🔗 For Live Data (Optional)**
+
+The app works with **mock data** by default. For **real-time data** from synchronizer:
+
+1. **Start proxy server** (new terminal)
+   ```bash
+   node proxy-server.js
+   ```
+
+2. **Start synchronizer** (another terminal)
+   ```bash
+   cd synchronizer-cli
+   synchronize start
+   ```
+
+3. **Refresh your browser** - App will now show live data instead of mock data
+
 ### **🛠️ Option 2: Development Mode (Requires Flutter)**
 
 For development and making changes to the code:
